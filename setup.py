@@ -16,11 +16,12 @@ setuptools.setup(
         'Documentation': 'https://debloch.readthedocs.io/en/latest/',
         'Source':'https://github.com/ccp4/electron-diffraction',
     },
-
-    # packages=['multislice','scattering','wallpp'],
     packages=setuptools.find_packages(),
     include_package_data=True,
-    package_data={'multislice/data':['splines.npy']},
+    package_data={
+       'multislice':['data/splines.npy'],
+       'scattering':['data/abcd.npy'],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License ",
